@@ -40,9 +40,47 @@ Completed items move to `siamshort-kms/Archive/todos/YYYY-MM.md` per workspace r
 - [x] Deep analysis report → `vault/Reports/2026-08-01-deep-analysis-01.md` (6 findings + 5 skill recommendations)
 - [x] `render_reports.py` nightly summary → `vault/Reports/auto/`, wired into workflow with `compute_outcomes.py`
 
-## P6 — Style profiles
-- [ ] Extract per-user / per-project / per-model style profiles → `vault/Style-Profiles/` + `tags.style_profiles` table
-- [ ] Guard against over-fit: profiles keyed by subject/medium category
+## P6 — Prompt best-practice mining (owner requirement 2026-08-01, supersedes old P6)
+Goal 1: best way to write prompts per SUBJECT TYPE (character / scene / prop / …), image + video,
+incl. lighting, camera, anti-slop → separate note per type in `vault/Best-Practices/`.
+Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short-drama, MV …)
++ strategy for continuous self-improvement as prompt data grows.
+
+### A — Corpus preparation (small steps)
+- [ ] A1. Heuristic subject-type classifier (SQL regex + entity links): character / scene-location / prop-object / storyboard-sheet / vfx-edit / performance-swap / other → `metrics.prompt_corpus` view
+- [ ] A2. Spot-check classifier on 40 sampled prompts (in-chat), fix rules until ~90% right
+- [ ] A3. Quality cohorts per type: kept + converged-final + single_success = "good" vs superseded-early = "draft"
+
+### B — Image best-practice notes (one small task each)
+- [ ] B1. `image-character.md` — character/cast prompts (identity, wardrobe, face consistency, ref scoping)
+- [ ] B2. `image-scene.md` — locations/sets (materials, depth, lighting anchors)
+- [ ] B3. `image-prop.md` — objects/props (isolation, material detail)
+- [ ] B4. `image-storyboard-sheet.md` — panel sheets (the kept-prompt winner shape)
+- [ ] B5. `image-techniques.md` — cross-cutting: lighting grammar, camera/lens, composition, anti-slop negatives
+
+### C — Video best-practice notes
+- [ ] C1. `video-character-performance.md` — character shots, performance/face swap, identity locks
+- [ ] C2. `video-action-vfx.md` — action beats, physics causality, destruction/energy
+- [ ] C3. `video-continuity-extend.md` — extend/next-shot, position locks, start-frame refs
+- [ ] C4. `video-techniques.md` — timing blocks, camera movement, lighting, audio cues, anti-slop
+- [ ] C5. Per-model syntax appendix (seedance `[image N]` vs xskill `@image_file_N`, ratio/duration quirks)
+
+### D — Video genre profiling
+- [ ] D1. Genre classifier heuristics (vlog/vox-pop, advertise/commercial, movie/cinematic, short-drama, MV, other) + spot-check
+- [ ] D2. Per-genre profile notes → `vault/Best-Practices/genre-*.md` (ratio, duration, pacing, prompt shape, model choice)
+
+### E — Self-improvement strategy & knowledge management
+- [ ] E1. `vault/Best-Practices/_strategy.md` — how the loop stays alive: nightly data growth → re-mine triggers (every N new chains / monthly), evidence-linked notes (every claim cites chain/query), versioned updates (append changelog per note, never silent rewrite)
+- [ ] E2. Vault management conventions: folder layout, naming, note template with Evidence/Changelog sections
+- [ ] E3. Re-mining runbook: repeatable scripts (chain extraction + cohort queries) saved under `vault/Queries/`
+- [ ] E4. (later) validation results from P8 feed back into the notes (what worked in practice)
+
+### F — (LATER) Full automation: one prompt → complete video
+- [ ] F1. Loop spec per shot: composer (v1 in converged shape) → inspect output → classify deviation → apply ONE playbook move → regen → converged → burst variations (from report 02)
+- [ ] F2. Pipeline spec end-to-end: one user prompt → genre profile (D) → story/shot breakdown → per-shot prompts from best-practice notes (B/C) → shot loop (F1) with continuity locks → assemble
+- [ ] F3. Prototype as an agent flow on DEV via SiamShort MCP (human gate per shot first, then unattended)
+- [ ] F4. Benchmark: attempts/shot + points/shot vs human baseline (4.94 attempts, seedance) — iterate until it wins
+- [ ] F5. Handoff package → owner ports to n8n/production
 
 ## P7 — Suggestion skill drafts
 - [ ] Draft enhance-prompt skill(s) → `vault/Skill-Drafts/` (profile + model-spec constraints; Thai→English handling)
