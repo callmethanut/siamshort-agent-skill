@@ -62,7 +62,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 
 ### C — Video best-practice notes
 - [x] C1. `video-character-performance.md` — DONE 2026-08-01: LENGTH LAW (3.5k+ templates worst), ONE-delta doctrine, positional targeting, body-part close-up valve, placeholder lint
-- [ ] C2. `video-action-physics.md` — GENERATE action/VFX shots from scratch: action beats, physics causality, destruction/energy
+- [x] C2. `video-action-physics.md` — DONE 2026-08-01: reflex-beats +12.5 (physics-guide validated), montage permission, creature anti-slop, witness-camera shape
 - [ ] C3. `video-continuity-extend.md` — extend/next-shot, position locks, start-frame refs
 - [ ] C4. `video-techniques.md` — timing blocks, camera movement, lighting, audio cues, anti-slop
 - [ ] C6. `video-edit-vfx.md` — EDIT existing footage: background replace, relight, object remove, style transform (edit main_cat, 1,737 video prompts)
