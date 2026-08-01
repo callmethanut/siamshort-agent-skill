@@ -14,23 +14,49 @@ Local Obsidian just pulls.
 your PC    git pull  → Obsidian sees new reports
 ```
 
+## Two-repo layout
+
+The vault is a **separate git repo** nested at `_agent-skill/vault/` (root
+repo gitignores `vault/`), so Obsidian git sync stays independent of the
+tooling repo:
+
+| Repo | Contents | Who pushes |
+|---|---|---|
+| `agent-skill` (root) | tooling, workflow, migrations, docs | you |
+| `agent-skill-vault` (`vault/`) | Obsidian notes + auto-reports | you + the nightly bot |
+
 ## One-time setup
 
-### 1. Create the private repo and push
+### 1. Create the two private repos and push
 
 ```bash
 cd _agent-skill
-git init -b main
-git add .
-git commit -m "agent-skill-enhancement scaffold"
+git commit -m "agent-skill-enhancement scaffold"          # root (vault untracked)
 gh repo create <org>/agent-skill --private --source . --push
+
+cd vault
+git commit -m "vault init"
+gh repo create <org>/agent-skill-vault --private --source . --push
 ```
 
-Must be **private** — the vault and reports contain internal analytics.
-Check before the first push: `git status` must NOT list
-`supabase/envs/analytics/.env` (it is gitignored; only `.env.example` goes in).
+Both must be **private**. Check before the first push: root `git status` must
+NOT list `supabase/envs/analytics/.env` or anything under `vault/`.
 
-### 2. Add the single secret
+Then edit `VAULT_REPO` at the top of `.github/workflows/nightly.yml` to the
+real vault repo name (e.g. `your-org/agent-skill-vault`).
+
+### 1b. Vault push token
+
+The workflow's default token only reaches its own repo, so pushing reports to
+the vault repo needs a **fine-grained PAT**: GitHub → Settings → Developer
+settings → Fine-grained tokens → scope it to ONLY `agent-skill-vault` with
+**Contents: Read and write**. Add it to the `agent-skill` repo:
+
+```bash
+gh secret set VAULT_PUSH_TOKEN        # paste the PAT
+```
+
+### 2. Add the credentials secret
 
 All credentials travel as ONE repo secret, `ANALYTICS_ENV_FILE`, whose value
 is the entire content of your filled `.env`:

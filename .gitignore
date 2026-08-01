@@ -1,7 +1,7 @@
 supabase/envs/*/.env
 __pycache__/
 *.pyc
-vault/.obsidian/workspace*
-vault/.obsidian/cache
+# vault is its own separate git repo (Obsidian sync) — never tracked here
+vault/
 .DS_Store
 Thumbs.db
