@@ -65,8 +65,8 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] C2. `video-action-physics.md` — DONE 2026-08-01: reflex-beats +12.5 (physics-guide validated), montage permission, creature anti-slop, witness-camera shape
 - [x] C3. `video-continuity-extend.md` — DONE 2026-08-01: artifacts-beat-adjectives, named continuity anchors, series constants restating, no-overlay barrage, technical-pass trick
 - [x] C4. `video-techniques.md` — DONE 2026-08-01: slow-mo +16.5, locked-cam for identity, montage/one-take matrix, duration→params, lens ban holds for video
-- [ ] C6. `video-edit-vfx.md` — EDIT existing footage: background replace, relight, object remove, style transform (edit main_cat, 1,737 video prompts)
-- [ ] C5. Per-model syntax appendix (seedance `[image N]` vs xskill `@image_file_N`, ratio/duration quirks)
+- [x] C6. `video-edit-vfx.md` — DONE 2026-08-01: preserve-list +5.4, role-blocks beat lock-walls, delta-gets-own-keep-list, sync-to-camera-motion, timed-entry; C5 syntax table folded in
+- [x] C5. DROPPED as separate note (owner) — folded into C6 as one syntax table
 
 ### D — Video genre profiling
 - [ ] D1. Genre classifier heuristics (vlog/vox-pop, advertise/commercial, movie/cinematic, short-drama, MV, other) + spot-check
