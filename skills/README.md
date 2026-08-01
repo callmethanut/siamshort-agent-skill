@@ -4,7 +4,9 @@ Generated from the mined Best-Practices vault (`../vault/Best-Practices/`, 2026-
 
 | skill | video type | key data behind it |
 |---|---|---|
-| `siamshort-module-prompt-laws` | (shared module, loaded by all) | the LAW tier: ref-count, panel-count, length, technique lifts, anti-slop verdicts |
+| `siamshort-module-prompt-laws` | shared module (always) | the LAW tier: ref-count, panel-count, length, technique lifts, anti-slop verdicts |
+| `siamshort-module-image-recipes` | shared module (conditional) | FULL image templates from B1–B6: portraits, sheets, plates, props, multi-ref staging, model routing |
+| `siamshort-module-video-recipes` | shared module (always) | FULL video templates from C1–C6: one-delta V2V, swap headers, action composite, series recipe, role-blocks, technique matrix, ref-syntax |
 | `siamshort-video-vox-explainer` | topic → narrated explainer (vox style) | stills-first (scene stills 4× video success), faceless framing, script gate |
 | `siamshort-video-advertise` | product/brand commercial | best-genre recipes (26.7%): studio isolation, b-roll eruption beat, lip-sync presenter |
 | `siamshort-video-documentary` | process/industrial series | best series recipe (29.7%): restated constants, hands-only, handheld |
@@ -19,7 +21,7 @@ Copy the folders into the agent-service workspace registry:
 ```
 agent-service-vercel/workspace/.claude/skills/<name>/
 ```
-`siamshort-module-prompt-laws` must ship together with any of the primary skills (always-load dependency). The referenced platform modules (`siamshort-module-studio-platform`, `-anti-plastic`, `-shot-continuity`, `-storyboard-sheet`, `-physics-guide`) already exist in that registry.
+All three shared modules (`prompt-laws`, `image-recipes`, `video-recipes`) must ship together with any primary skill. The referenced platform modules (`siamshort-module-studio-platform`, `-anti-plastic`, `-shot-continuity`, `-storyboard-sheet`, `-physics-guide`) already exist in that registry.
 
 ## Maintenance
 

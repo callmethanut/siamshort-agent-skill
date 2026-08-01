@@ -2,11 +2,37 @@
   "schema_version": 1,
   "kind": "primary",
   "visibility": "user",
-  "surfaces": ["studio", "canvas"],
+  "surfaces": [
+    "studio",
+    "canvas"
+  ],
   "dependencies": [
-    { "name": "siamshort-module-studio-platform", "load": "always" },
-    { "name": "siamshort-module-prompt-laws", "load": "always" },
-    { "name": "siamshort-module-shot-continuity", "load": "conditional", "when": "narrative sections need connected shots" },
-    { "name": "siamshort-module-anti-plastic", "load": "conditional", "when": "photoreal performance prompts" }
+    {
+      "name": "siamshort-module-studio-platform",
+      "load": "always"
+    },
+    {
+      "name": "siamshort-module-prompt-laws",
+      "load": "always"
+    },
+    {
+      "name": "siamshort-module-image-recipes",
+      "load": "conditional",
+      "when": "writing any image prompt (stills, plates, boards, refs)"
+    },
+    {
+      "name": "siamshort-module-video-recipes",
+      "load": "always"
+    },
+    {
+      "name": "siamshort-module-shot-continuity",
+      "load": "conditional",
+      "when": "narrative sections need connected shots"
+    },
+    {
+      "name": "siamshort-module-anti-plastic",
+      "load": "conditional",
+      "when": "photoreal performance prompts"
+    }
   ]
 }

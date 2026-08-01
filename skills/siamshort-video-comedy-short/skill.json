@@ -2,13 +2,47 @@
   "schema_version": 1,
   "kind": "primary",
   "visibility": "user",
-  "surfaces": ["studio", "canvas"],
+  "surfaces": [
+    "studio",
+    "canvas"
+  ],
   "dependencies": [
-    { "name": "siamshort-module-studio-platform", "load": "always" },
-    { "name": "siamshort-module-prompt-laws", "load": "always" },
-    { "name": "siamshort-module-storyboard-sheet", "load": "conditional", "when": "creating per-scene boards" },
-    { "name": "siamshort-module-anti-plastic", "load": "conditional", "when": "photoreal cast prompts" },
-    { "name": "siamshort-module-shot-continuity", "load": "conditional", "when": "shots must connect within a scene" },
-    { "name": "siamshort-module-physics-guide", "load": "conditional", "when": "slapstick beats with force, falls, or collisions" }
+    {
+      "name": "siamshort-module-studio-platform",
+      "load": "always"
+    },
+    {
+      "name": "siamshort-module-prompt-laws",
+      "load": "always"
+    },
+    {
+      "name": "siamshort-module-image-recipes",
+      "load": "conditional",
+      "when": "writing any image prompt (stills, plates, boards, refs)"
+    },
+    {
+      "name": "siamshort-module-video-recipes",
+      "load": "always"
+    },
+    {
+      "name": "siamshort-module-storyboard-sheet",
+      "load": "conditional",
+      "when": "creating per-scene boards"
+    },
+    {
+      "name": "siamshort-module-anti-plastic",
+      "load": "conditional",
+      "when": "photoreal cast prompts"
+    },
+    {
+      "name": "siamshort-module-shot-continuity",
+      "load": "conditional",
+      "when": "shots must connect within a scene"
+    },
+    {
+      "name": "siamshort-module-physics-guide",
+      "load": "conditional",
+      "when": "slapstick beats with force, falls, or collisions"
+    }
   ]
 }

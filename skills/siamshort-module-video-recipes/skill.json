@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "kind": "module",
+  "visibility": "internal",
+  "surfaces": ["studio", "canvas"],
+  "dependencies": []
+}
