@@ -1,0 +1,70 @@
+name: nightly-sync
+
+on:
+  schedule:
+    # 20:30 UTC = 03:30 Bangkok (GitHub cron is ALWAYS UTC)
+    - cron: "30 20 * * *"
+  workflow_dispatch: {}   # manual "Run workflow" button for testing
+
+permissions:
+  contents: write   # needed to push auto-reports back to the repo
+
+concurrency:
+  group: nightly-sync
+  cancel-in-progress: false   # never kill a running sync; queue instead
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r supabase/requirements.txt
+
+      - name: Write env file from secret
+        env:
+          ANALYTICS_ENV_FILE: ${{ secrets.ANALYTICS_ENV_FILE }}
+        run: |
+          if [ -z "$ANALYTICS_ENV_FILE" ]; then
+            echo "Secret ANALYTICS_ENV_FILE is not set"; exit 1
+          fi
+          printf '%s\n' "$ANALYTICS_ENV_FILE" > supabase/envs/analytics/.env
+
+      - name: ETL sync (incremental, all sources)
+        working-directory: supabase
+        env:
+          SUPABASE_ENV: analytics
+        run: python3 scripts/etl_copy.py
+
+      - name: LLM tagging batch
+        # continue-on-error until P4 wires the tagging LLM — the stub exits 1.
+        continue-on-error: true
+        working-directory: supabase
+        env:
+          SUPABASE_ENV: analytics
+        run: python3 scripts/tag_runs.py --limit 500
+
+      # P5: uncomment once scripts/render_reports.py exists.
+      # - name: Render auto-reports
+      #   working-directory: supabase
+      #   env:
+      #     SUPABASE_ENV: analytics
+      #   run: python3 scripts/render_reports.py
+
+      - name: Commit auto-reports (if any)
+        run: |
+          git config user.name "agent-skill-bot"
+          git config user.email "agent-skill-bot@users.noreply.github.com"
+          git add vault/Reports/auto 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no new reports"
+          else
+            git commit -m "auto: nightly report $(date -u +%F)"
+            git push
+          fi
