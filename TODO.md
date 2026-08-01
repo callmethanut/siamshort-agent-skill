@@ -69,13 +69,13 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] C5. DROPPED as separate note (owner) — folded into C6 as one syntax table
 
 ### D — Video genre profiling
-- [ ] D1. Genre classifier heuristics (vlog/vox-pop, advertise/commercial, movie/cinematic, short-drama, MV, other) + spot-check
-- [ ] D2. Per-genre profile notes → `vault/Best-Practices/genre-*.md` (ratio, duration, pacing, prompt shape, model choice)
+- [x] D1. Genre classifier + spot-check DONE 2026-08-01 (MV 3,837 / drama 1,555 / horror 243 / ad 225 / doc 118 / comedy 41 / vlog 16)
+- [x] D2. `genre-profiles.md` DONE 2026-08-01 (single consolidated file — cohorts too small to split; shortest-prompts-win inverse; per-genre recipes + routing)
 
 ### E — Self-improvement strategy & knowledge management
-- [ ] E1. `vault/Best-Practices/_strategy.md` — how the loop stays alive: nightly data growth → re-mine triggers (every N new chains / monthly), evidence-linked notes (every claim cites chain/query), versioned updates (append changelog per note, never silent rewrite)
-- [ ] E2. Vault management conventions: folder layout, naming, note template with Evidence/Changelog sections
-- [ ] E3. Re-mining runbook: repeatable scripts (chain extraction + cohort queries) saved under `vault/Queries/`
+- [x] E1. `_strategy.md` DONE 2026-08-01: improvement loop, re-mine triggers (+2k runs / monthly / new model / template change), evidence tiers LAW/RECIPE/SIGNAL
+- [x] E2. folded into `_strategy.md` (note conventions, append-only changelogs, data-growth rules)
+- [x] E3. `Queries/corpus-mining.md` DONE 2026-08-01: 7 standard queries (distribution, law checks, lift template, chain finder, attempts/target)
 - [ ] E4. (later) validation results from P8 feed back into the notes (what worked in practice)
 
 ### F — (LATER) Full automation: one prompt → complete video
