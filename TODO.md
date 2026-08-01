@@ -53,7 +53,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] A4. Hierarchical taxonomy (migration 008): main_cat (generate/edit/transfer/dialogue) → sub_cat + `ops[]` multi-operation flags
 
 ### B — Image best-practice notes (one small task each)
-- [ ] B1. `image-character.md` — character/cast prompts (identity, wardrobe, face consistency, ref scoping)
+- [x] B1. `image-character.md` — DONE 2026-08-01: 3 proven templates (canonical ref portrait / structured fields / angle sheet), 6 rules, anti-warp negatives
 - [ ] B2. `image-scene.md` — locations/sets (materials, depth, lighting anchors)
 - [ ] B3. `image-prop.md` — objects/props (isolation, material detail)
 - [ ] B4. `image-storyboard-sheet.md` — panel sheets (the kept-prompt winner shape)
