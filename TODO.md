@@ -86,6 +86,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [ ] F5. Handoff package → owner ports to n8n/production
 
 ## P7 — Suggestion skill drafts
+- [x] SKILL SET v1 (2026-08-01, owner-requested): `skills/` — 5 end-to-end video-type skills (vox-explainer / advertise / documentary / comedy-short / music-video) + shared `siamshort-module-prompt-laws` module encoding the LAW tier; agent-service registry format; deploy = copy into workspace/.claude/skills/
 - [ ] Draft enhance-prompt skill(s) → `vault/Skill-Drafts/` (profile + model-spec constraints; Thai→English handling)
 - [ ] Review against existing platform prompt conventions (pass-2 EXTEND, anti-plastic, continuity) — read-only reference
 
