@@ -6,8 +6,14 @@ on:
     - cron: "30 20 * * *"
   workflow_dispatch: {}   # manual "Run workflow" button for testing
 
+# The vault is a SEPARATE private repo (Obsidian sync). Reports are pushed
+# there, not here. Set VAULT_REPO below and add the VAULT_PUSH_TOKEN secret
+# (fine-grained PAT, contents:write on the vault repo only).
+env:
+  VAULT_REPO: callmethanut/agent-skill-vault   # ← edit to the real vault repo
+
 permissions:
-  contents: write   # needed to push auto-reports back to the repo
+  contents: read
 
 concurrency:
   group: nightly-sync
@@ -19,6 +25,13 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+
+      - name: Checkout vault repo (reports destination)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.VAULT_REPO }}
+          token: ${{ secrets.VAULT_PUSH_TOKEN }}
+          path: vault
 
       - uses: actions/setup-python@v5
         with:
@@ -57,11 +70,12 @@ jobs:
       #     SUPABASE_ENV: analytics
       #   run: python3 scripts/render_reports.py
 
-      - name: Commit auto-reports (if any)
+      - name: Commit auto-reports to vault repo (if any)
+        working-directory: vault
         run: |
           git config user.name "agent-skill-bot"
           git config user.email "agent-skill-bot@users.noreply.github.com"
-          git add vault/Reports/auto 2>/dev/null || true
+          git add Reports/auto 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no new reports"
           else
