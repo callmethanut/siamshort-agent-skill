@@ -30,15 +30,15 @@ Completed items move to `siamshort-kms/Archive/todos/YYYY-MM.md` per workspace r
 - [ ] (dropped: sync-sources Edge Function — superseded by Actions Variant A; n8n explicitly excluded)
 
 ## P4 — LLM tagging batch
-- [ ] Choose tagging LLM + wire key into `.env` (`TAGGING_*`)
-- [ ] Implement `call_llm()` in `tag_runs.py`; tag axes: subject / medium / style[] / lighting / camera / language
-- [ ] Outcome labels from platform signals (kept / re-rolled / abandoned) — SQL, not LLM
-- [ ] Idempotency check: re-run tags 0 already-tagged rows; spot-check 30 tags by hand
+- [x] `call_llm()` implemented (gemini/anthropic, retries, JSON-robust, graceful skip)
+- [x] Outcome labels SQL — `compute_outcomes.py` rebuilds `tags.run_outcomes` nightly (kept 118 / superseded 7,879 / single_success 1,222 / final 1,805 / failed 1,728 / untracked 4,194)
+- [ ] DEFERRED (owner): API-key tagging of backlog — analysis proceeding in-chat instead
+- [ ] Consider copying minimal `canvas_nodes` for canvas keeper signals (66% of runs are canvas)
 
-## P5 — Metrics + first report
-- [ ] Finalize `metrics.*` views (keeper-rate, cost-per-keeper, re-roll chains) against real columns
-- [ ] First analysis report → `vault/Reports/` (per model × ratio × env)
-- [ ] Save reusable SQL → `vault/Queries/`
+## P5 — Metrics + first report — DONE 2026-08-01
+- [x] `metrics.*` views rebuilt on real columns (006)
+- [x] Deep analysis report → `vault/Reports/2026-08-01-deep-analysis-01.md` (6 findings + 5 skill recommendations)
+- [x] `render_reports.py` nightly summary → `vault/Reports/auto/`, wired into workflow with `compute_outcomes.py`
 
 ## P6 — Style profiles
 - [ ] Extract per-user / per-project / per-model style profiles → `vault/Style-Profiles/` + `tags.style_profiles` table
