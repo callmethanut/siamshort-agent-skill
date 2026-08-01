@@ -23,8 +23,9 @@ Completed items move to `siamshort-kms/Archive/todos/YYYY-MM.md` per workspace r
 ## P3 — First clone all envs + nightly GitHub Actions (Variant A — locked)
 - [x] FIRST CLONE COMPLETE all 7 envs (2026-08-01): 16,946 ai_runs (16,419 with prompt) · 204 projects · 164 profiles · 368 shots · 156 shot_assets (118 selected=keeper signals) · usage_pricing 29/env
 - [ ] Decide any EXTRA outcome tables (mix-stage refs, canvas node presence, exports) — add to `TABLES` + migration; per-table backfill only
-- [ ] Push `_agent-skill` as private GitHub repo + set `ANALYTICS_ENV_FILE` secret (guide: `docs/github-actions-setup.md`)
-- [ ] Manual `workflow_dispatch` test run of `nightly-sync`, then confirm scheduled run next morning
+- [x] Two private repos live: `callmethanut/siamshort-agent-skill` (tooling+Actions) + `callmethanut/siamshort-agent-skill-vault` (vault, own repo for Obsidian sync); secrets `ANALYTICS_ENV_FILE` + `VAULT_PUSH_TOKEN` set
+- [x] `nightly-sync` manual run GREEN end-to-end (2026-08-01): dual checkout ✓, ETL all 7 envs ✓, tagging graceful-skip ✓, report step ✓; scheduled 03:30 BKK nightly
+- [ ] Confirm first *scheduled* run tomorrow morning (Actions tab should show a run ~03:30 BKK)
 - [ ] Data-handling note: customer prompts = internal only; no media copied (storage paths only)
 - [ ] (dropped: sync-sources Edge Function — superseded by Actions Variant A; n8n explicitly excluded)
 

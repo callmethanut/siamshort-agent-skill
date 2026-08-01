@@ -63,12 +63,17 @@ jobs:
           SUPABASE_ENV: analytics
         run: python3 scripts/tag_runs.py --limit 500
 
-      # P5: uncomment once scripts/render_reports.py exists.
-      # - name: Render auto-reports
-      #   working-directory: supabase
-      #   env:
-      #     SUPABASE_ENV: analytics
-      #   run: python3 scripts/render_reports.py
+      - name: Compute outcome labels
+        working-directory: supabase
+        env:
+          SUPABASE_ENV: analytics
+        run: python3 scripts/compute_outcomes.py
+
+      - name: Render auto-reports
+        working-directory: supabase
+        env:
+          SUPABASE_ENV: analytics
+        run: python3 scripts/render_reports.py
 
       - name: Commit auto-reports to vault repo (if any)
         working-directory: vault
