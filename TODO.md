@@ -47,9 +47,9 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 + strategy for continuous self-improvement as prompt data grows.
 
 ### A — Corpus preparation (small steps)
-- [ ] A1. Heuristic subject-type classifier (SQL regex + entity links): character / scene-location / prop-object / storyboard-sheet / vfx-edit / performance-swap / other → `metrics.prompt_corpus` view
-- [ ] A2. Spot-check classifier on 40 sampled prompts (in-chat), fix rules until ~90% right
-- [ ] A3. Quality cohorts per type: kept + converged-final + single_success = "good" vs superseded-early = "draft"
+- [x] A1. Heuristic subject-type classifier (migration 007, `metrics.prompt_corpus`, 12 types) (SQL regex + entity links): character / scene-location / prop-object / storyboard-sheet / vfx-edit / performance-swap / other → `metrics.prompt_corpus` view
+- [x] A2. Spot-checked 60+ samples over 2 iterations (storyboard→image-only, dialogue-performance + shot-with-refs + world-concept added, story-ring/prop fix) (in-chat), fix rules until ~90% right
+- [x] A3. Quality cohorts (`metrics.prompt_corpus_good`, 3,069 accepted prompts): kept + converged-final + single_success = "good" vs superseded-early = "draft"
 
 ### B — Image best-practice notes (one small task each)
 - [ ] B1. `image-character.md` — character/cast prompts (identity, wardrobe, face consistency, ref scoping)
