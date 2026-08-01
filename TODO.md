@@ -57,7 +57,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] B2. `image-scene.md` — DONE 2026-08-01: DEPOPULATED template (escalating negations + reference-plate purpose), ref-scoped relight recipe, stills-then-animate rule
 - [x] B3. `image-prop.md` — DONE 2026-08-01: studio-isolation template v2 (NO hands), material+wear specificity, jewelry warning, b-roll video recipe (camera-first + tactile)
 - [x] B4. `image-storyboard-sheet.md` — DONE 2026-08-01: PANEL-COUNT LAW (6→70% / 9→4%), kept-sheet anatomy, consistency clause, no-persona rule
-- [ ] B5. `image-techniques.md` — cross-cutting: lighting grammar, camera/lens, composition, anti-slop negatives
+- [x] B5. `image-techniques.md` — DONE 2026-08-01: within-type phrase lifts; physical-light-source doctrine; lens-numbers myth-bust; 4k/octane slop confirmed; targeted-vs-generic negatives
 
 ### C — Video best-practice notes
 - [ ] C1. `video-character-performance.md` — character shots, performance/face swap, identity locks
