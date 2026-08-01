@@ -1,4 +1,6 @@
-# skills/ — one skill per end-to-end video type
+# skills/ — one skill = one complete video production, end to end
+
+Each PRIMARY skill runs the full pipeline: **PHASE A** write the story → storyboard → assets → cost gate · **PHASE B** the gen-loop engine generates EVERY shot (compose → generate → inspect → one-move repair → accept → carry continuity → next) until the whole story's board is DONE · **PHASE C** assembly manifest. Gate mode `review-each` or `auto-run` chosen at intake.
 
 Generated from the mined Best-Practices vault (`../vault/Best-Practices/`, 2026-08-01 corpus baseline). Format matches the agent-service skill registry (`SKILL.md` + `skill.json`, primary skills + module dependencies).
 
@@ -7,6 +9,7 @@ Generated from the mined Best-Practices vault (`../vault/Best-Practices/`, 2026-
 | `siamshort-module-prompt-laws` | shared module (always) | the LAW tier: ref-count, panel-count, length, technique lifts, anti-slop verdicts |
 | `siamshort-module-image-recipes` | shared module (conditional) | FULL image templates from B1–B6: portraits, sheets, plates, props, multi-ref staging, model routing |
 | `siamshort-module-video-recipes` | shared module (always) | FULL video templates from C1–C6: one-delta V2V, swap headers, action composite, series recipe, role-blocks, technique matrix, ref-syntax |
+| `siamshort-module-gen-loop` | shared module (always) | the Phase-B loop engine: deviation→repair-move table (from 905 mined chains), failure branch, gate policy, progress board, resume rules |
 | `siamshort-video-vox-explainer` | topic → narrated explainer (vox style) | stills-first (scene stills 4× video success), faceless framing, script gate |
 | `siamshort-video-advertise` | product/brand commercial | best-genre recipes (26.7%): studio isolation, b-roll eruption beat, lip-sync presenter |
 | `siamshort-video-documentary` | process/industrial series | best series recipe (29.7%): restated constants, hands-only, handheld |
@@ -21,7 +24,7 @@ Copy the folders into the agent-service workspace registry:
 ```
 agent-service-vercel/workspace/.claude/skills/<name>/
 ```
-All three shared modules (`prompt-laws`, `image-recipes`, `video-recipes`) must ship together with any primary skill. The referenced platform modules (`siamshort-module-studio-platform`, `-anti-plastic`, `-shot-continuity`, `-storyboard-sheet`, `-physics-guide`) already exist in that registry.
+All four shared modules (`prompt-laws`, `image-recipes`, `video-recipes`, `gen-loop`) must ship together with any primary skill. The referenced platform modules (`siamshort-module-studio-platform`, `-anti-plastic`, `-shot-continuity`, `-storyboard-sheet`, `-physics-guide`) already exist in that registry.
 
 ## Maintenance
 
