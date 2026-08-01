@@ -50,6 +50,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] A1. Heuristic subject-type classifier (migration 007, `metrics.prompt_corpus`, 12 types) (SQL regex + entity links): character / scene-location / prop-object / storyboard-sheet / vfx-edit / performance-swap / other → `metrics.prompt_corpus` view
 - [x] A2. Spot-checked 60+ samples over 2 iterations (storyboard→image-only, dialogue-performance + shot-with-refs + world-concept added, story-ring/prop fix) (in-chat), fix rules until ~90% right
 - [x] A3. Quality cohorts (`metrics.prompt_corpus_good`, 3,069 accepted prompts): kept + converged-final + single_success = "good" vs superseded-early = "draft"
+- [x] A4. Hierarchical taxonomy (migration 008): main_cat (generate/edit/transfer/dialogue) → sub_cat + `ops[]` multi-operation flags
 
 ### B — Image best-practice notes (one small task each)
 - [ ] B1. `image-character.md` — character/cast prompts (identity, wardrobe, face consistency, ref scoping)
