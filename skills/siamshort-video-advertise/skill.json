@@ -25,6 +25,10 @@
       "load": "always"
     },
     {
+      "name": "siamshort-module-gen-loop",
+      "load": "always"
+    },
+    {
       "name": "siamshort-module-storyboard-sheet",
       "load": "conditional",
       "when": "creating the concept board"

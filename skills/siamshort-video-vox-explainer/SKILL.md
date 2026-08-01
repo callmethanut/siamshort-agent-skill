@@ -1,30 +1,32 @@
 ---
 name: siamshort-video-vox-explainer
 description: >-
-  End-to-end vox-style narrated explainer video from a single topic: research → script with per-scene VO lines → scene stills (reference plates) → animate per scene → captions/assembly plan, with a cost gate before any point-spending batch. Use for "vox", "explainer", "คลิปอธิบาย", "ทำวิดีโอสรุปเรื่อง", faceless narrated content, newsroom/mixed-media style topic videos.
+  Complete vox-style explainer production, one skill end-to-end: write the story/narration from a topic → storyboard → scene plates → generate EVERY scene's video in a supervised loop until the whole story is finished → assembly manifest. Use for "vox", "explainer", "คลิปอธิบาย", "ทำวิดีโอสรุปเรื่อง", faceless narrated topic videos, newsroom/mixed-media style.
 ---
 
-# Vox Explainer (topic → narrated video)
+# Vox Explainer — topic in, finished multi-scene video out
 
-Faceless, narration-driven. The narration script is the spine; every visual serves a VO line.
+Faceless, narration-driven. The story script is the spine; the production is not done until every scene on the board is generated and accepted.
 
-## Workflow
+## PHASE A — Story & pre-production (approval-gated, cheap to edit)
 
-1. **Intake:** topic + target length (default 60s), ratio (9:16 vertical default, 16:9 optional), language (TH/EN), style key (newsroom / mixed-media / diorama-like collage). Confirm before research.
-2. **Research & script:** outline 5–8 beats; write VO narration per beat (one breath-length sentence each, spoken-Thai natural if TH). Show the full script for approval — the script gate is the cheapest edit point.
-3. **Scene plan:** one scene per beat: VO line · visual concept · still-vs-motion decision. Prefer stills-first — generate each scene as an image plate, then animate only the scenes that need motion (data: establishing/scene stills succeed 4× more than direct scene video).
-4. **Cost gate:** show scene count × image/video points estimate; require explicit confirmation before generating.
-5. **Scene plates (images):** DEPOPULATED plate template per scene — no people unless the beat requires a figure; then faceless framing (hands/silhouette/back view — drift-proof). One committed lighting sentence with a named physical source. ≤2 refs per plate.
-6. **Animate:** per scene, plate as start-frame + ONE motion beat + one named camera move; slow-motion on emphasis beats. Duration per scene from the script's VO length. No text overlays (captions burn in at assembly).
-7. **Review loop:** one scene at a time, verify the run, attach, stop at human gate before next.
-8. **Assembly plan:** ordered scene list + VO text + caption text + music note — hand to the user's editor/export flow.
+1. **Intake:** topic · target length (default 60s) · ratio (9:16 default) · language (TH/EN) · style key (newsroom / mixed-media / collage) · **gate mode (review-each / auto-run)**. Confirm.
+2. **Write the story:** research the topic, then write the full narration as a STORY — hook → 4–7 beats with narrative build (setup, tension/surprise, resolution/takeaway) → closing line. One breath-length VO sentence per beat, natural spoken language. **Show the full script — this gate is where edits are free.**
+3. **Storyboard:** one scene per beat — VO line · visual concept · still-or-motion decision. Board it as 4–6 panel sheets when scenes are visual sequences. Prefer stills-first: every scene starts as an image plate; only scenes needing motion get animated (scene stills succeed 4× more than direct scene video).
+4. **Scene plates:** DEPOPULATED plate per scene (image-recipes B2); faceless framing when a figure is needed (hands/silhouette/back). One SAME style sentence across all scenes (series constant).
+5. **Cost gate:** scenes × stills × clips estimate → explicit confirmation. Then Phase B starts and runs to completion.
 
-## Craft rules (from prompt-laws)
-- Consistent style: repeat the SAME style sentence in every scene prompt (the series-constants rule).
-- No lens numbers, no 4K/octane tokens; purpose statement on every plate.
-- Numbers/diagrams in-scene beat text overlays — models fail at rendered text; leave data callouts to captions.
+## PHASE B — Production loop (run the gen-loop engine until ALL scenes done)
 
-## Non-negotiable behavior
-- Script approval before any generation; cost confirmation before any batch.
-- One video generation at a time; never claim success on unverified runs.
-- Platform security, permissions, and point rules override this workflow.
+For each scene in board order, run the loop from the gen-loop module:
+- compose from plate: plate as start-frame + ONE motion beat + one named camera move · slow-motion on emphasis beats · duration from the VO line's length · no text overlays (captions are post)
+- generate → verify → inspect (against VO line + plate) → repair by the deviation table (max 3) → accept → next scene
+- style-drift repairs restate the shared style sentence verbatim
+- the loop does not stop until the progress board shows every scene DONE (or blocked scenes are reported)
+
+## PHASE C — Assembly manifest
+
+Ordered scenes · VO text per scene · caption text · music/SFX notes · blocked-scene report if any. Hand to the export/edit flow.
+
+## Non-negotiable
+Script approval before any generation · cost confirmation before Phase B · loop discipline from gen-loop (one run in flight, verified terminal states, resumable board) · platform rules override.

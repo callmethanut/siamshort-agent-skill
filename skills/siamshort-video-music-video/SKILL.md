@@ -1,33 +1,32 @@
 ---
 name: siamshort-video-music-video
 description: >-
-  End-to-end music video: song/audio + artist refs → visual treatment → shot list synced to song sections → performance clips and swap passes with strict audio preservation → assembly plan. Use for "MV", "music video", "มิวสิควิดีโอ", performance videos, singer content, footage-swap MV work. Encodes the hard-won laws from the platform's largest and most difficult workload (3,837 prompts).
+  Complete music-video production, one skill end-to-end: song + artist in → visual story/treatment → section-synced shot list → generate EVERY performance and narrative clip in a loop (including footage-swap passes) until the full MV is finished → assembly manifest. Use for "MV", "music video", "มิวสิควิดีโอ", performance videos, footage-swap MV work.
 ---
 
-# Music Video (song → MV)
+# Music Video — song in, finished MV out
 
-The MV corpus's #1 lesson: mega-template prompts fail. Every prompt this skill emits stays under ~2,000 chars and changes exactly ONE thing per pass.
+Hard-won laws from the platform's largest workload: every prompt ≤2,000 chars, ONE delta per pass, montage between clips, never within.
 
-## Workflow
+## PHASE A — Story & pre-production
 
-1. **Intake:** song (file/length/structure: intro-verse-chorus-bridge), artist identity refs, treatment direction (performance / narrative / hybrid), ratio (21:9 cinematic or 9:16 social). Confirm.
-2. **Treatment:** one style sentence + palette + 3–5 recurring visual motifs. Approval gate.
-3. **Shot list synced to song sections:** each shot = section, beat description, performance vs b-roll, duration. Time-blocks are ENCOURAGED here (music sync is the one place they lift: 0-3s intro riff / 3-7s first line…). Approval + cost gate.
-4. **Performance clips (new generation):** style sentence + `@[cast]` ref + body-part focus alternation (full shot → hands on strings → close-up) — the identity-pressure release valve. Locked camera on identity-critical shots; montage between shots is fine (MV is the montage-friendly genre).
-5. **Swap passes (existing footage):** per pass —
-   - `KEEP THE ORIGINAL AUDIO TRACK` as the loud header
-   - source spec facts (duration, resolution, fps) one line
-   - positional targeting for multi-performer footage ("the man on SCREEN-LEFT…")
-   - character ref scoped "person only — backdrop does not enter frame"
-   - ONE delta: swap OR relight OR environment — never combined; chain passes
-   - technical plates (occlusion/matte guides) when compositing needs them
-6. **Review loop:** one clip at a time, verify, attach, human gate.
-7. **Assembly plan:** clips mapped to song timeline; color/grade notes for post.
+1. **Intake:** song (file, length, structure: intro/verse/chorus/bridge/outro) · artist identity refs · direction (performance / narrative / hybrid) · ratio (21:9 or 9:16) · existing footage to swap? · **gate mode**. Confirm.
+2. **Write the visual story (treatment):** even a performance MV tells a story — emotional arc mapped to song structure (verse = intimate, chorus = explosive, bridge = the turn), ONE style sentence + palette, 3–5 recurring visual motifs that evolve across sections. **Approval gate on the treatment.**
+3. **Shot list synced to the song:** every shot = song section + time range + beat description + type (performance / narrative / b-roll / swap-pass). Time-blocks are ENCOURAGED here — music sync is where they lift. Performance/narrative alternation plans the identity pressure (full shots ↔ body-part close-ups).
+4. **Assets:** artist canonical portraits (+ model sheet for swaps) · location plates per motif.
+5. **Cost gate** → explicit confirmation. Phase B runs to completion.
 
-## Craft rules (from prompt-laws)
-- Never montage WITHIN a swap/performance clip (continuous take), montage freely BETWEEN clips.
-- Placeholder lint before submit: reject any prompt containing "paste", "[INSERT", "TODO".
-- Lens numbers, fps-in-prose, no-music declarations: strip them — parameter fields carry format.
+## PHASE B — Production loop (gen-loop engine over the shot list)
 
-## Non-negotiable behavior
-- Treatment + shot-list approval before generation; cost confirmation per batch; one generation at a time; never claim success on unverified runs; platform rules override.
+Per shot by type:
+- **performance (new gen):** style sentence FIRST + `@[cast]` + body-part focus alternation + locked camera on identity-critical shots · continuous take within the clip
+- **narrative:** start-frame continuity from prior accepted shot + named anchors + ONE beat
+- **swap pass (existing footage):** `KEEP THE ORIGINAL AUDIO TRACK` header · source spec facts one line · positional targeting ("the man on SCREEN-LEFT") · character ref scoped "person only — backdrop does not enter frame" · ONE delta (swap OR relight OR environment); chain passes; technical plates when compositing needs them
+- generate → verify → inspect (identity, sync feel, motif consistency) → repair by deviation table → accept → next shot
+- loop until every section of the song has its accepted clips — the MV is not done until the board covers the full song timeline
+
+## PHASE C — Assembly manifest
+Clips mapped to the song timeline · grade/color notes · motif continuity notes · blocked-shot report.
+
+## Non-negotiable
+Treatment + shot-list approval before generation · cost confirmation before Phase B · gen-loop discipline · never montage within a performance clip · placeholder lint on every prompt · platform rules override.

@@ -1,30 +1,30 @@
 ---
 name: siamshort-video-documentary
 description: >-
-  End-to-end process/industrial documentary video: subject → process breakdown → chained shot series with restated constants → assembly plan. Use for "สารคดี", "documentary", "process video", "โรงงาน/เวิร์คช็อป", how-it's-made content, industrial b-roll series. Built on the platform's highest-success series recipe (29.7%).
+  Complete process/industrial documentary production, one skill end-to-end: write the story of the process → shot series plan → generate EVERY step's clip in a chained loop until the whole story is finished → assembly manifest. Use for "สารคดี", "documentary", "process video", how-it's-made content, workshop/factory series.
 ---
 
-# Documentary (process → chained series)
+# Documentary — subject in, finished process film out
 
-The one genre that chains indefinitely without refs — consistency comes from restated constants, not attachments.
+Built on the platform's highest-success series recipe: consistency by restated constants, chained until the story completes.
 
-## Workflow
+## PHASE A — Story & pre-production
 
-1. **Intake:** subject/process, number of steps, ratio (16:9 or 21:9 cinematic), narrated or ambient. Confirm.
-2. **Process breakdown:** list the physical steps in order (one process beat per shot, 5s each). Approval gate.
-3. **Define the CONSTANTS BLOCK** (written once, reused verbatim in every shot):
-   - setting: "inside the same small <place>"
-   - framing rule: "Only hands and forearms are visible" (faceless = drift-proof; relax only if the user wants faces)
-   - wardrobe: one line ("gray industrial coveralls")
-   - camera: "Documentary handheld. Macro <detail action>. Medium <context action>." (documentary is the ONE genre where handheld lifts)
-4. **Cost gate:** shots × points; explicit confirmation.
-5. **Shot loop:** per shot → "Continue inside the same <place>. <this step's process beat with tactile material words>." + CONSTANTS BLOCK verbatim. First shot omits "Continue". One clip at a time, verify, attach, human gate.
-6. **Assembly plan:** ordered steps + optional VO per step (hand to vox-explainer flow if narration wanted).
+1. **Intake:** subject/process · ratio (16:9 / 21:9) · narrated or ambient · target step count · **gate mode (review-each / auto-run)**. Confirm.
+2. **Write the story:** a documentary is still a story — write it as: opening context (why this craft matters) → the process steps in dramatic order (raw material → transformation beats → the satisfying finish) → closing result shot. One physical process beat per step, 5s each. **Approval gate on the story + step list.**
+3. **Define the CONSTANTS BLOCK** (reused verbatim in every shot): setting line ("inside the same small <place>") · framing rule ("Only hands and forearms are visible" — faceless default, drift-proof) · wardrobe line · camera line ("Documentary handheld. Macro <detail>. Medium <context>." — the one genre where handheld lifts).
+4. **Cost gate:** steps × points → explicit confirmation. Phase B then runs to completion.
 
-## Craft rules (from prompt-laws)
-- Tactile material words drive texture AND motion quality ("freshly cut aluminum", "fine abrasive pad", "slick algae-covered wood").
-- Close-up on process detail, medium for context — alternate.
-- No people beyond the operator's hands; no text overlays; sound design in post.
+## PHASE B — Production loop (gen-loop engine over the step list)
 
-## Non-negotiable behavior
-- Breakdown approval before generation; cost confirmation; one generation at a time; never claim success on unverified runs; platform rules override.
+Per step, in order:
+- compose: "Continue inside the same <place>. <this step's beat with tactile material words>." + CONSTANTS BLOCK verbatim (first shot omits "Continue")
+- alternate macro detail / medium context framing between steps
+- generate → verify → inspect (does the material/process read? consistent with prior step?) → repair by the deviation table (style drift → restate constants; fake physics → causal chain + reflex) → accept → next step
+- loop until the progress board shows every step DONE
+
+## PHASE C — Assembly manifest
+Ordered steps · optional VO per step (route to vox-explainer script style if narration wanted) · ambient/SFX notes for post · blocked-step report.
+
+## Non-negotiable
+Story approval before generation · cost confirmation before Phase B · gen-loop discipline · platform rules override.

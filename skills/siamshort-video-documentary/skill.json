@@ -25,6 +25,10 @@
       "load": "always"
     },
     {
+      "name": "siamshort-module-gen-loop",
+      "load": "always"
+    },
+    {
       "name": "siamshort-module-anti-plastic",
       "load": "conditional",
       "when": "photoreal close-ups need texture repair"

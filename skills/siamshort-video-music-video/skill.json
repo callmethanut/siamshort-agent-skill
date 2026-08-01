@@ -25,6 +25,10 @@
       "load": "always"
     },
     {
+      "name": "siamshort-module-gen-loop",
+      "load": "always"
+    },
+    {
       "name": "siamshort-module-shot-continuity",
       "load": "conditional",
       "when": "narrative sections need connected shots"
