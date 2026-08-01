@@ -56,7 +56,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] B1. `image-character.md` — DONE 2026-08-01: 3 proven templates (canonical ref portrait / structured fields / angle sheet), 6 rules, anti-warp negatives
 - [x] B2. `image-scene.md` — DONE 2026-08-01: DEPOPULATED template (escalating negations + reference-plate purpose), ref-scoped relight recipe, stills-then-animate rule
 - [x] B3. `image-prop.md` — DONE 2026-08-01: studio-isolation template v2 (NO hands), material+wear specificity, jewelry warning, b-roll video recipe (camera-first + tactile)
-- [ ] B4. `image-storyboard-sheet.md` — panel sheets (the kept-prompt winner shape)
+- [x] B4. `image-storyboard-sheet.md` — DONE 2026-08-01: PANEL-COUNT LAW (6→70% / 9→4%), kept-sheet anatomy, consistency clause, no-persona rule
 - [ ] B5. `image-techniques.md` — cross-cutting: lighting grammar, camera/lens, composition, anti-slop negatives
 
 ### C — Video best-practice notes
