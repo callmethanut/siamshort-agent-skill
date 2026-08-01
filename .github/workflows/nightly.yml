@@ -10,7 +10,7 @@ on:
 # there, not here. Set VAULT_REPO below and add the VAULT_PUSH_TOKEN secret
 # (fine-grained PAT, contents:write on the vault repo only).
 env:
-  VAULT_REPO: callmethanut/agent-skill-vault   # ← edit to the real vault repo
+  VAULT_REPO: callmethanut/siamshort-agent-skill-vault
 
 permissions:
   contents: read
