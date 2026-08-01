@@ -61,7 +61,7 @@ Goal 2: best-practice profile per VIDEO GENRE (vlog/vox, advertise, movie, short
 - [x] B6. `image-shot-with-refs.md` — DONE 2026-08-01 (owner request): REF-COUNT LAW (2 refs peak, 3rd halves odds), ±scoping combo 38.9%, staging doctrine (multi-pass 2-ref)
 
 ### C — Video best-practice notes
-- [ ] C1. `video-character-performance.md` — character shots, performance/face swap, identity locks
+- [x] C1. `video-character-performance.md` — DONE 2026-08-01: LENGTH LAW (3.5k+ templates worst), ONE-delta doctrine, positional targeting, body-part close-up valve, placeholder lint
 - [ ] C2. `video-action-vfx.md` — action beats, physics causality, destruction/energy
 - [ ] C3. `video-continuity-extend.md` — extend/next-shot, position locks, start-frame refs
 - [ ] C4. `video-techniques.md` — timing blocks, camera movement, lighting, audio cues, anti-slop
