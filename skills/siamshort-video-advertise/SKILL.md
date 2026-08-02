@@ -11,8 +11,10 @@ The platform's most reliable genre — BECAUSE prompts stay short and structured
 ## PHASE A — Story & pre-production
 
 1. **Intake:** product (+ real product image refs) · ONE key message · tone (premium/fresh/tech) · presenter? + exact spoken line · length (15–30s) · ratio (16:9, 9:16 cut optional) · **gate mode**. Confirm.
-2. **Write the ad story:** even 15 seconds has a story — hook (problem or desire) → product reveal → proof/feature beat → payoff + CTA moment. 3–6 beats, each one shot. **Approval gate on story + beat list.**
+2. **Write the ad story:** even 15 seconds has a story — hook (problem or desire) → product reveal → proof/feature beat → payoff + CTA moment. 3–6 beats, each one shot, using TWO cross-cut shot categories: **(A) Product-in-Environment** (the product living in its usage scene) and **(B) Auxiliary** (pure environment/lifestyle/macro-texture selling the scenario WITHOUT the product) — cross-cutting A/B keeps the ad from being "packaging on a table". Vary shot scale across the flow (Wide establish → Medium detail → Close-up emotion/texture → controlled Wide or packaging for climax) and alternate camera grammar between cuts (push-in, reveal, Dutch, arc — whip pan sparingly). **Approval gate on story + beat list.**
 3. **Concept board:** 4-panel storyboard sheet (2×2, title block, ONE style sentence, consistency clause). Approval.
+3b. **Bind user assets:** product photos or media the user provided are bound to their storyboard positions — NEVER regenerated; generate only what's missing. Design ≥2 application-scene elements for compositing.
+3c. **Audio layers (designed, not an afterthought):** one global music track brief + narration (voice character, tone, exact script, which shots it covers) — generated via the platform's audio flow or produced in post; every video prompt then carries `no music, no subtitles`.
 4. **Asset stills:** product hero via studio-isolation template (SINGLE object, seamless background, NO hands, purpose statement, material+finish words). Fine jewelry → macro, lock winner immediately. Presenter → canonical reference portrait.
 5. **Cost gate** → explicit confirmation. Phase B runs to completion.
 

@@ -106,6 +106,17 @@ SOURCE — Lock the source video exactly. Preserve <performance list>.
 - Film grain: OK inside a committed style sentence for cinematic dialogue/shots; never as a lone token.
 - Lint every prompt: `[INSERT`, `paste …here`, `TODO`, unfilled `{x}` → reject before submit.
 
+
+## Seedance conventions (adopted 2026-08-02, DRAFT until corpus-validated)
+
+- **Wrappers**: music `(...)` · SFX `<...>` · dialogue `{exact line}` (mark language if foreign: `Says in Japanese: {…}`) · on-screen title `【...】`.
+- **Dual-ref subjects**: per subject, head + full-body refs, both labeled: "Subject 1 — facial features reference <<<image_1>>> (head); hair/makeup/costume reference <<<image_2>>> (full-body)".
+- **Section order**: Camera → Subject → Space → Audio.
+- **Ordered beats, not clock time**: exact second ranges are unreliable — write beats in order; label "Shot 1 / Shot 2" inside one gen when needed. Time-blocks only when music-sync FEEL is the intent.
+- **Action degree**: body part + amplitude/speed/intensity ("snaps head left", "pushes hard off the ground"); beats major → minor in story order.
+- **Assembly negatives**: when audio/subs are assembled in post (all end-to-end skills): every video prompt includes `no music` + `no subtitles`; never write narration text into the video prompt when a separate narration track exists.
+- **Keyframe stills** (start/end/highlight): locate the beat (or mentally simulate subject+camera+environment) and describe ONLY that static moment — pre-loading posture and gaze (start) · finishing pose + aftermath (end) · peak-impact composition (highlight).
+
 ## Model reference syntax
 | provider/surface | grammar |
 |---|---|

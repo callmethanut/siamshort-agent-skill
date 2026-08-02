@@ -11,6 +11,9 @@ Run this loop over the approved shot list, in order, until every shot has an acc
 ## The loop (per shot)
 
 ```
+0. BIND      user-provided assets first: anything the user uploaded or named
+             is bound to its storyboard position — NEVER regenerate an asset
+             the user already provided
 1. COMPOSE   v1 prompt from the recipe modules (converged shape from the start:
              refs ≤2 scoped ± · locks · ONE beat · style/constants restated ·
              lint for placeholders) — v1 quality is where attempts are saved
