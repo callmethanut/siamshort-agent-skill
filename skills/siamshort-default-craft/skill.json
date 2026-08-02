@@ -1,12 +1,15 @@
 {
   "schema_version": 1,
-  "kind": "module",
-  "visibility": "internal",
+  "kind": "primary",
+  "visibility": "user",
   "surfaces": ["studio", "canvas"],
   "dependencies": [
     { "name": "siamshort-module-prompt-laws", "load": "always" },
-    { "name": "siamshort-module-image-recipes", "load": "conditional", "when": "an image prompt is being written" },
-    { "name": "siamshort-module-video-recipes", "load": "conditional", "when": "a video prompt is being written" }
+    { "name": "siamshort-module-image-recipes", "load": "conditional", "when": "an image prompt is being written or repaired" },
+    { "name": "siamshort-module-video-recipes", "load": "conditional", "when": "a video prompt is being written or repaired" },
+    { "name": "siamshort-module-gen-loop", "load": "conditional", "when": "the user shows a failed/wrong output to repair" },
+    { "name": "siamshort-module-anti-plastic", "load": "conditional", "when": "photoreal output looks plastic/AI and needs realism repair" },
+    { "name": "siamshort-module-studio-platform", "load": "conditional", "when": "the user asks to actually run the rewritten prompt" }
   ],
-  "_proposal": "Needs runtime support: a per-surface DEFAULT loadout (e.g. kind:'default' or a surface-level defaultSkills list) that auto-loads this when no primary skill is active. Until then this file is a spec, not functional."
+  "_proposal": "Runtime request (handoff 2026-08-02): load this skill by DEFAULT per surface when no other primary skill is active (kind:'default' or surface defaultSkills list). Until supported, it works as a normal invocable skill."
 }
