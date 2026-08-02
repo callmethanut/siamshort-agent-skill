@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "primary",
+  "visibility": "user",
+  "surfaces": ["studio", "canvas"],
+  "dependencies": [
+    { "name": "siamshort-module-prompt-laws", "load": "always" },
+    { "name": "siamshort-module-image-recipes", "load": "conditional", "when": "the prompt targets image generation" },
+    { "name": "siamshort-module-video-recipes", "load": "conditional", "when": "the prompt targets video generation or editing" },
+    { "name": "siamshort-module-gen-loop", "load": "conditional", "when": "the user shows a failed/wrong output to repair" },
+    { "name": "siamshort-module-anti-plastic", "load": "conditional", "when": "photoreal output looks plastic/AI and needs realism repair" },
+    { "name": "siamshort-module-studio-platform", "load": "conditional", "when": "the user asks to actually run the rewritten prompt" }
+  ]
+}

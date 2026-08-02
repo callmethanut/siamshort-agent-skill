@@ -10,6 +10,7 @@ Generated from the mined Best-Practices vault (`../vault/Best-Practices/`, 2026-
 | `siamshort-module-image-recipes` | shared module (conditional) | FULL image templates from B1–B6: portraits, sheets, plates, props, multi-ref staging, model routing |
 | `siamshort-module-video-recipes` | shared module (always) | FULL video templates from C1–C6: one-delta V2V, swap headers, action composite, series recipe, role-blocks, technique matrix, ref-syntax |
 | `siamshort-module-gen-loop` | shared module (always) | the Phase-B loop engine: deviation→repair-move table (from 905 mined chains), failure branch, gate policy, progress board, resume rules |
+| `siamshort-prompt-enhance` | **rewrite any prompt to best practice** (no generation, zero points) | all laws + recipes via modules; repair mode uses the gen-loop deviation table |
 | `siamshort-video-vox-explainer` | topic → narrated explainer (vox style) | stills-first (scene stills 4× video success), faceless framing, script gate |
 | `siamshort-video-advertise` | product/brand commercial | best-genre recipes (26.7%): studio isolation, b-roll eruption beat, lip-sync presenter |
 | `siamshort-video-documentary` | process/industrial series | best series recipe (29.7%): restated constants, hands-only, handheld |
