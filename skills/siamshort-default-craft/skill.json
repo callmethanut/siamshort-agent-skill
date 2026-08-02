@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "kind": "module",
+  "visibility": "internal",
+  "surfaces": ["studio", "canvas"],
+  "dependencies": [
+    { "name": "siamshort-module-prompt-laws", "load": "always" },
+    { "name": "siamshort-module-image-recipes", "load": "conditional", "when": "an image prompt is being written" },
+    { "name": "siamshort-module-video-recipes", "load": "conditional", "when": "a video prompt is being written" }
+  ],
+  "_proposal": "Needs runtime support: a per-surface DEFAULT loadout (e.g. kind:'default' or a surface-level defaultSkills list) that auto-loads this when no primary skill is active. Until then this file is a spec, not functional."
+}
