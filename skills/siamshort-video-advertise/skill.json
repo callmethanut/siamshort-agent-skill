@@ -16,6 +16,11 @@
       "load": "always"
     },
     {
+      "name": "siamshort-module-style-profiles",
+      "load": "conditional",
+      "when": "the user names a visual style (pixar, anime, realistic, noir, …) or the production commits to one"
+    },
+    {
       "name": "siamshort-module-image-recipes",
       "load": "conditional",
       "when": "writing any image prompt (stills, plates, boards, refs)"

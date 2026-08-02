@@ -9,6 +9,7 @@ Generated from the mined Best-Practices vault (`../vault/Best-Practices/`, 2026-
 | `siamshort-module-prompt-laws` | shared module (always) | the LAW tier: ref-count, panel-count, length, technique lifts, anti-slop verdicts |
 | `siamshort-module-image-recipes` | shared module (conditional) | FULL image templates from B1–B6: portraits, sheets, plates, props, multi-ref staging, model routing |
 | `siamshort-module-video-recipes` | shared module (always) | FULL video templates from C1–C6: one-delta V2V, swap headers, action composite, series recipe, role-blocks, technique matrix, ref-syntax |
+| `siamshort-module-style-profiles` | shared module (conditional) | visual-look library: pixar, anime-cel, photoreal-cinematic, neon-noir, documentary-real, thai-period, product-premium (extensible) |
 | `siamshort-module-gen-loop` | shared module (always) | the Phase-B loop engine: deviation→repair-move table (from 905 mined chains), failure branch, gate policy, progress board, resume rules |
 | `siamshort-default-craft` | **tier 0/1: write · enhance · repair any prompt** (no automation, zero points); designed to also load as the per-surface DEFAULT when no skill is active | all laws + recipes via modules; repair mode = gen-loop deviation table |
 | `siamshort-video-vox-explainer` | topic → narrated explainer (vox style) | stills-first (scene stills 4× video success), faceless framing, script gate |
