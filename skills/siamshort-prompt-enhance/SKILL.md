@@ -18,11 +18,15 @@ This skill NEVER generates media unless the user explicitly asks to run the resu
    - one committed lighting sentence with a named physical source
    - purpose statement · field structure · locks/preserve-lists where the shape requires
    - LAW violations the user asked for get flagged, not silently obeyed: 9-panel sheet → propose two sheets; 4-ref composition → propose staged passes; 3.5k-char swap → cut to one delta
-4. **Deliver:**
+4. **Fill the gaps (completeness pass)** — a rewritten prompt must have every required slot for its shape filled. If the user's draft is missing a slot, INFER a sensible choice from their intent, subject, and genre — and mark every inferred addition in the why-bullets so the user can veto it:
+   - **image**: subject (ONE) · composition/framing (shot size + angle in words) · **lighting** (one sentence, named physical source, matched to type — dramatic for portraits, never for environments) · style anchor (one committed sentence) · purpose statement · refs scoped ± · targeted negatives for this type's known failure (NO hands / silhouettes / warping…)
+   - **video**: everything above, plus ONE action beat (with reflex if force is involved) · ONE named camera move (or locked camera if identity matters) · slow-motion decision on hero beats · continuity anchors when it follows another shot · montage/one-take per the matrix
+   - never fill with generic quality words — fill with concrete choices ("lit by the flickering fluorescent tube above the workbench", not "good lighting")
+5. **Deliver:**
    - the rewritten prompt in a copy-ready block (keep the user's language mix — Thai/EN both fine)
    - 3–5 bullets: what changed and WHICH law/recipe drove it
    - if params matter (ratio, duration, model routing), state them separately — they belong in settings, not prose
-5. **Repair mode** — if the user shows a bad OUTPUT: classify the deviation (gen-loop table) → change exactly ONE thing → return the minimally-edited prompt and say which move was applied and why only one.
+6. **Repair mode** — if the user shows a bad OUTPUT: classify the deviation (gen-loop table) → change exactly ONE thing → return the minimally-edited prompt and say which move was applied and why only one.
 
 ## Boundaries
 - Zero-point operation: no generation, no runs, unless the user says run it.
