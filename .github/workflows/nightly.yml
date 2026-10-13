@@ -1,9 +1,8 @@
 name: nightly-sync
 
 on:
-  schedule:
-    # 20:30 UTC = 03:30 Bangkok (GitHub cron is ALWAYS UTC)
-    - cron: "30 20 * * *"
+  # Schedule removed (T-524, 2026-10-13): every nightly run since about 2026-08-30 failed at
+  # "Checkout vault repo" (VAULT_PUSH_TOKEN / vault access). Re-add the cron once the token works.
   workflow_dispatch: {}   # manual "Run workflow" button for testing
 
 # The vault is a SEPARATE private repo (Obsidian sync). Reports are pushed
